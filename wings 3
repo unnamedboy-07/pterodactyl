@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# Change directory to wings
+cd wings || { echo "Directory 'wings' not found"; exit 1; }
+
+# Run docker-compose
+docker-compose up -d --force-recreate
+
+# Download the playit-linux-amd64 file
+wget https://github.com/playit-cloud/playit-agent/releases/download/v0.15.26/playit-linux-amd64
+
+# Make the playit-linux-amd64 file executable
+chmod +x playit-linux-amd64
+
+# Execute the playit-linux-amd64 file
+./playit-linux-amd64
