@@ -1,0 +1,10 @@
+#!/bin/bash
+
+# Change to pterodactyl directory
+cd pterodactyl
+
+# Switch to root user
+sudo su
+
+# Open the configuration file in nano (this runs after gaining root, enter manually if running interactively)
+nano /etc/pterodactyl/config.yml
